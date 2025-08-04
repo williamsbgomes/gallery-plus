@@ -7,6 +7,7 @@ import { Badge } from "./components/Badge";
 import { Button } from "./components/Button";
 import { ButtonIcon } from "./components/ButtonIcon";
 import { Divider } from "./components/Divider";
+import { InputCheckbox } from "./components/InputCheckbox";
 import { InputText } from "./components/InputText";
 
 export function App() {
@@ -54,6 +55,10 @@ export function App() {
 
 			<div>
 				<InputText placeholder="Digite algo..." icon={SearchIcon} />
+			</div>
+
+			<div>
+				<InputCheckbox />
 			</div>
 		</div>
 	);
