@@ -1,10 +1,13 @@
 import ChevronLeftIcon from "./assets/icons/chevron-left.svg?react";
 import ChevronRightIcon from "./assets/icons/chevron-right.svg?react";
+import SearchIcon from "./assets/icons/search.svg?react";
+
 import { Alert } from "./components/Alert";
 import { Badge } from "./components/Badge";
 import { Button } from "./components/Button";
 import { ButtonIcon } from "./components/ButtonIcon";
 import { Divider } from "./components/Divider";
+import { InputText } from "./components/InputText";
 
 export function App() {
 	return (
@@ -47,6 +50,10 @@ export function App() {
 
 			<div>
 				<Divider />
+			</div>
+
+			<div>
+				<InputText placeholder="Digite algo..." icon={SearchIcon} />
 			</div>
 		</div>
 	);
