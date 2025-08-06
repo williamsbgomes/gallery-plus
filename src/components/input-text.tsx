@@ -1,7 +1,7 @@
 import type { ComponentProps, ReactNode } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
-import { Icon } from "./Icon";
-import { Text } from "./Text";
+import { Icon } from "./icon";
+import { Text } from "./text";
 
 export const inputTextContainerVariants = tv({
 	base: "flex flex-col gap-1",

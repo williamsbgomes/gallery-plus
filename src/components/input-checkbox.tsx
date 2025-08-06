@@ -1,7 +1,7 @@
 import type { ComponentProps } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
 import CheckIcon from "../assets/icons/check.svg?react";
-import { Icon } from "./Icon";
+import { Icon } from "./icon";
 
 const inputCheckboxWrapperVariants = tv({
 	base: `
