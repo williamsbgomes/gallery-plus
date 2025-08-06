@@ -1,8 +1,9 @@
-import type { ComponentProps } from "react";
+import type { ComponentProps, ReactNode } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
+import FileImageIcon from "../assets/icons/image.svg?react";
 import UploadFileIcon from "../assets/icons/upload-file.svg?react";
 import { Icon } from "./icon";
-import { Text } from "./text";
+import { Text, textVariants } from "./text";
 
 const inputSingleFileVariants = tv({
 	base: `
@@ -36,9 +37,11 @@ const inputSingleFileIconVariants = tv({
 
 interface InputSingleFileProps
 	extends VariantProps<typeof inputSingleFileVariants>,
-		Omit<ComponentProps<"input">, "size"> {}
+		Omit<ComponentProps<"input">, "size"> {
+	error: ReactNode;
+}
 
-export function InputSingleFile({ size }: InputSingleFileProps) {
+export function InputSingleFile({ size, error }: InputSingleFileProps) {
 	return (
 		<div>
 			<div className="w-full relative group cursor-pointer">
@@ -56,6 +59,38 @@ export function InputSingleFile({ size }: InputSingleFileProps) {
 						<br />
 						ou clique para selecionar
 					</Text>
+				</div>
+			</div>
+			{error && (
+				<Text variant="label-small" className="text-accent-red">
+					Erro no campo
+				</Text>
+			)}
+
+			<div
+				className={`
+          flex gap-3 items-center border border-solid border-border-primary
+          rounded mt-5 p-3
+        `}
+			>
+				<Icon svg={FileImageIcon} className="fill-white w-6 h-6" />
+				<div className="flex flex-col">
+					<div className="truncate max-w-80">
+						<Text variant="label-medium" className="text-placeholder">
+							Nome do arquivo.png
+						</Text>
+					</div>
+					<div className="flex">
+						<button
+							type="button"
+							className={textVariants({
+								variant: "label-small",
+								className: "text-accent-red cursor-pointer hover:underline",
+							})}
+						>
+							Remover
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
