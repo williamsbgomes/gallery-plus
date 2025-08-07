@@ -1,7 +1,7 @@
+import { useForm } from "react-hook-form";
 import ChevronLeftIcon from "./assets/icons/chevron-left.svg?react";
 import ChevronRightIcon from "./assets/icons/chevron-right.svg?react";
 import SearchIcon from "./assets/icons/search.svg?react";
-
 import { Alert } from "./components/alert";
 import { Badge } from "./components/badge";
 import { Button } from "./components/button";
@@ -12,6 +12,8 @@ import { InputSingleFile } from "./components/input-single-file";
 import { InputText } from "./components/input-text";
 
 export function App() {
+	const form = useForm();
+
 	return (
 		<div className="grid gap-7 p-6">
 			<div className="flex gap-3">
@@ -63,7 +65,7 @@ export function App() {
 			</div>
 
 			<div>
-				<InputSingleFile />
+				<InputSingleFile form={form} {...form.register("file")} />
 			</div>
 		</div>
 	);
