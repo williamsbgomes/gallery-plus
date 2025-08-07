@@ -89,7 +89,10 @@ export function InputSingleFile({
 								svg={UploadFileIcon}
 								className={inputSingleFileIconVariants()}
 							/>
-							<Text className="text-placeholder text-center">
+							<Text
+								variant="label-medium"
+								className="text-placeholder text-center"
+							>
 								Arraste o arquivo aqui
 								<br />
 								ou clique para selecionar
@@ -119,9 +122,9 @@ export function InputSingleFile({
 					{replaceBy}
 					<div
 						className={`
-						flex gap-3 items-center border border-solid border-border-primary
-						rounded mt-5 p-3
-					`}
+							flex gap-3 items-center border border-solid border-border-primary
+							rounded mt-5 p-3
+						`}
 					>
 						<Icon svg={FileImageIcon} className="fill-white w-6 h-6" />
 						<div className="flex flex-col">
