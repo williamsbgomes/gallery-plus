@@ -7,12 +7,15 @@ import { Badge } from "./components/badge";
 import { Button } from "./components/button";
 import { ButtonIcon } from "./components/button-icon";
 import { Divider } from "./components/divider";
+import { ImageFilePreview } from "./components/image-file-preview";
 import { InputCheckbox } from "./components/input-checkbox";
 import { InputSingleFile } from "./components/input-single-file";
 import { InputText } from "./components/input-text";
 
 export function App() {
 	const form = useForm();
+	const file = form.watch("file");
+	const fileSrc = file?.[0] ? URL.createObjectURL(file[0]) : undefined;
 
 	return (
 		<div className="grid gap-7 p-6">
@@ -69,6 +72,7 @@ export function App() {
 					allowedExtensions={["png", "jpg", "jpeg", "webp"]}
 					maxFileSizeInMB={50}
 					form={form}
+					replaceBy={<ImageFilePreview src={fileSrc} alt="Image preview" />}
 					{...form.register("file")}
 				/>
 			</div>
