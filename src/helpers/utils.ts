@@ -1,4 +1,6 @@
-export function debounce<T extends (...args: unknown[]) => unknown>(
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// biome-ignore lint/suspicious/noExplicitAny: needed for generic function parameters
+export function debounce<T extends (...args: any[]) => any>(
 	func: T,
 	wait: number,
 ) {
@@ -13,6 +15,7 @@ export function debounce<T extends (...args: unknown[]) => unknown>(
 		if (timeout !== null) {
 			clearTimeout(timeout);
 		}
+
 		timeout = setTimeout(later, wait);
 	};
 }
