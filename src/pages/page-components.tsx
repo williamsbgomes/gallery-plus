@@ -14,7 +14,7 @@ import {
 	DialogHeader,
 } from "../components/dialog";
 import { Divider } from "../components/divider";
-import { ImageFilePreview } from "../components/image-file-preview";
+import { ImagePreview } from "../components/image-preview";
 import { InputCheckbox } from "../components/input-checkbox";
 import { InputSingleFile } from "../components/input-single-file";
 import { InputText } from "../components/input-text";
@@ -80,7 +80,7 @@ export function PageComponents() {
 					allowedExtensions={["png", "jpg", "jpeg", "webp"]}
 					maxFileSizeInMB={50}
 					form={form}
-					replaceBy={<ImageFilePreview src={fileSrc} alt="Image preview" />}
+					replaceBy={<ImagePreview src={fileSrc} alt="Image preview" />}
 					{...form.register("file")}
 				/>
 			</div>
@@ -101,9 +101,7 @@ export function PageComponents() {
 								allowedExtensions={["png", "jpg", "jpeg", "webp"]}
 								maxFileSizeInMB={50}
 								form={form}
-								replaceBy={
-									<ImageFilePreview src={fileSrc} alt="Image preview" />
-								}
+								replaceBy={<ImagePreview src={fileSrc} alt="Image preview" />}
 								{...form.register("file")}
 							/>
 						</DialogBody>
