@@ -2,6 +2,7 @@ import cx from "classnames";
 import type { ComponentProps } from "react";
 import { Link } from "react-router";
 import Logo from "../assets/images/galeria-plus-full-logo.svg?react";
+import { PhotoNewDialog } from "../contexts/photos/components/photo-new-dialog";
 import { Button } from "./button";
 import { Container } from "./container";
 import { Divider } from "./divider";
@@ -25,7 +26,7 @@ export function MainHeader({ className, ...props }: MainHeaderProps) {
 			<Divider orientation="vertical" className="h-10" />
 
 			<div className="flex items-center gap-3">
-				<Button>Nova Foto</Button>
+				<PhotoNewDialog trigger={<Button>Nova Foto</Button>} />
 				<Button variant="secondary">Criar álbum</Button>
 			</div>
 		</Container>
