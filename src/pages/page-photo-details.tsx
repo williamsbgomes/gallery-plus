@@ -4,10 +4,13 @@ import { ImagePreview } from "../components/image-preview";
 import { Skeleton } from "../components/skeleton";
 import { Text } from "../components/text";
 import { AlbumsListSelectable } from "../contexts/albums/components/albums-list-selectable";
+import { useAlbums } from "../contexts/albums/hooks/use-albums";
 import { PhotosNavigator } from "../contexts/photos/components/photos-navigator";
 import type { Photo } from "../contexts/photos/models/photo";
 
 export function PagePhotoDetails() {
+	const { albums, isLoadingAlbums } = useAlbums();
+
 	const isLoadingPhoto = false;
 	const photo = {
 		id: "123",
@@ -56,12 +59,8 @@ export function PagePhotoDetails() {
 					</Text>
 					<AlbumsListSelectable
 						photo={photo}
-						albums={[
-							{ id: "3421", title: "Album 1" },
-							{ id: "123", title: "Album 2" },
-							{ id: "456", title: "Album 3" },
-						]}
-						loading={isLoadingPhoto}
+						albums={albums}
+						loading={isLoadingAlbums}
 					/>
 				</div>
 			</div>
