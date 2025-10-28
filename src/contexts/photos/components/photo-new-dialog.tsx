@@ -1,6 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { DialogClose, DialogTrigger } from "@radix-ui/react-dialog";
 import type React from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Alert } from "../../../components/alert";
 import { Button } from "../../../components/button";
@@ -24,6 +25,7 @@ interface PhotoNewDialogProps {
 }
 
 export function PhotoNewDialog({ trigger }: PhotoNewDialogProps) {
+	const [modalOpen, setModalOpen] = useState(false);
 	const form = useForm<PhotoNewFormSchema>({
 		resolver: zodResolver(photoNewFormSchema),
 	});
@@ -37,8 +39,14 @@ export function PhotoNewDialog({ trigger }: PhotoNewDialogProps) {
 		console.log(payload);
 	}
 
+	useEffect(() => {
+		if (!modalOpen) {
+			form.reset();
+		}
+	}, [modalOpen, form]);
+
 	return (
-		<Dialog>
+		<Dialog open={modalOpen} onOpenChange={setModalOpen}>
 			<DialogTrigger asChild>{trigger}</DialogTrigger>
 			<DialogContent>
 				<form onSubmit={form.handleSubmit(handleSubmit)}>
@@ -62,7 +70,7 @@ export function PhotoNewDialog({ trigger }: PhotoNewDialogProps) {
 							form={form}
 							allowedExtensions={["png", "jpg", "jpeg"]}
 							maxFileSizeInMB={50}
-							replaceBy={<ImagePreview className="w-full h-56" />}
+							replaceBy={<ImagePreview src={fileSrc} className="w-full h-56" />}
 							error={form.formState.errors.file?.message}
 							{...form.register("file")}
 						/>
