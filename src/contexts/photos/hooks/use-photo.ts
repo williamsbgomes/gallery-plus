@@ -1,8 +1,8 @@
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { api, fetcher } from "../../../helpers/api";
-import type { PhotoNewFormSchema } from "../../schemas";
 import type { Photo } from "../models/photo";
+import type { PhotoNewFormSchema } from "../schemas";
 
 interface PhotoDetailResponse extends Photo {
 	nextPhotoId?: string;

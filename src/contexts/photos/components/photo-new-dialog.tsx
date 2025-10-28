@@ -18,8 +18,8 @@ import { InputText } from "../../../components/input-text";
 import { Skeleton } from "../../../components/skeleton";
 import { Text } from "../../../components/text";
 import { useAlbums } from "../../albums/hooks/use-albums";
-import { type PhotoNewFormSchema, photoNewFormSchema } from "../../schemas";
 import { usePhoto } from "../hooks/use-photo";
+import { type PhotoNewFormSchema, photoNewFormSchema } from "../schemas";
 
 interface PhotoNewDialogProps {
 	trigger: React.ReactNode;
