@@ -2,7 +2,7 @@ import { useTransition } from "react";
 import { useParams } from "react-router";
 import { toast } from "sonner";
 import { Button } from "../components/button";
-import { Container } from "../components/container";
+import Container from "../components/container";
 import { ImagePreview } from "../components/image-preview";
 import { Skeleton } from "../components/skeleton";
 import { Text } from "../components/text";

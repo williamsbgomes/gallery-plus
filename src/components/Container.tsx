@@ -19,7 +19,7 @@ interface ContainerProps
 	as?: keyof React.JSX.IntrinsicElements;
 }
 
-export function Container({
+export default function Container({
 	as = "div",
 	children,
 	className,

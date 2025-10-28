@@ -1,7 +1,7 @@
 import type React from "react";
 import { useRef, useState } from "react";
 import SearchIcon from "../assets/icons/search.svg?react";
-import usePhotos from "../contexts/photos/hooks/use-photos";
+import { usePhotos } from "../contexts/photos/hooks/use-photos";
 import { debounce } from "../helpers/utils";
 import { InputText } from "./input-text";
 
