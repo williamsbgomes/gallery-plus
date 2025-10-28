@@ -1,4 +1,3 @@
-import { Dialog, DialogClose, DialogTrigger } from "@radix-ui/react-dialog";
 import { useForm } from "react-hook-form";
 import ChevronLeftIcon from "../assets/icons/chevron-left.svg?react";
 import ChevronRightIcon from "../assets/icons/chevron-right.svg?react";
@@ -8,10 +7,13 @@ import { Badge } from "../components/Badge";
 import { Button } from "../components/Button";
 import { ButtonIcon } from "../components/button-icon";
 import {
+	Dialog,
 	DialogBody,
+	DialogClose,
 	DialogContent,
 	DialogFooter,
 	DialogHeader,
+	DialogTrigger,
 } from "../components/Dialog";
 import { Divider } from "../components/Divider";
 import { ImagePreview } from "../components/image-preview";
