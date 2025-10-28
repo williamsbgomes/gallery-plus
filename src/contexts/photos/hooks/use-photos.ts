@@ -8,7 +8,7 @@ const toSearchParams = createSerializer({
 	q: parseAsString,
 });
 
-export default function usePhotos() {
+export function usePhotos() {
 	const [albumId, setAlbumId] = useQueryState("albumId");
 	const [q, setQ] = useQueryState("q");
 

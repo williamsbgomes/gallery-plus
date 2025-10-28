@@ -2,7 +2,7 @@ import { useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { api } from "../../../helpers/api";
 import usePhotoAlbums from "../../photos/hooks/use-photo-albums";
-import usePhotos from "../../photos/hooks/use-photos";
+import { usePhotos } from "../../photos/hooks/use-photos";
 import type { Album } from "../models/album";
 import type { AlbumNewFormSchema } from "../schemas";
 

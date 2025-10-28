@@ -14,7 +14,7 @@ import { InputText } from "../../../components/input-text";
 import { Skeleton } from "../../../components/skeleton";
 import { Text } from "../../../components/text";
 import PhotoImageSelectable from "../../photos/components/photo-image-selectable";
-import usePhotos from "../../photos/hooks/use-photos";
+import { usePhotos } from "../../photos/hooks/use-photos";
 import { useAlbum } from "../hooks/use-album";
 import { type AlbumNewFormSchema, albumNewFormSchema } from "../schemas";
 
