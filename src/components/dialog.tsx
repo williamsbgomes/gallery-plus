@@ -3,9 +3,9 @@ import cn from "classnames";
 import type { ComponentProps } from "react";
 import XIcon from "../assets/icons/x.svg?react";
 import { ButtonIcon } from "./button-icon";
-import { Card } from "./card";
-import { Divider } from "./divider";
-import { Text } from "./text";
+import { Card } from "./Card";
+import { Divider } from "./Divider";
+import { Text } from "./Text";
 
 export const Dialog = DialogPrimitive.Root;
 export const DialogTrigger = DialogPrimitive.Trigger;

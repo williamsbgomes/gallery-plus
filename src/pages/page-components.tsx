@@ -4,21 +4,21 @@ import ChevronLeftIcon from "../assets/icons/chevron-left.svg?react";
 import ChevronRightIcon from "../assets/icons/chevron-right.svg?react";
 import SearchIcon from "../assets/icons/search.svg?react";
 import { Alert } from "../components/Alert";
-import { Badge } from "../components/badge";
-import { Button } from "../components/button";
+import { Badge } from "../components/Badge";
+import { Button } from "../components/Button";
 import { ButtonIcon } from "../components/button-icon";
 import {
 	DialogBody,
 	DialogContent,
 	DialogFooter,
 	DialogHeader,
-} from "../components/dialog";
-import { Divider } from "../components/divider";
+} from "../components/Dialog";
+import { Divider } from "../components/Divider";
 import { ImagePreview } from "../components/image-preview";
 import { InputCheckbox } from "../components/input-checkbox";
 import { InputSingleFile } from "../components/input-single-file";
 import { InputText } from "../components/input-text";
-import { Text } from "../components/text";
+import { Text } from "../components/Text";
 
 export function PageComponents() {
 	const form = useForm();

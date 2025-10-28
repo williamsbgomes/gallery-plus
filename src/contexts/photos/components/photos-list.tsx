@@ -1,5 +1,5 @@
-import { Skeleton } from "../../../components/skeleton";
-import { Text } from "../../../components/text";
+import { Skeleton } from "../../../components/Sskeleton";
+import { Text } from "../../../components/Text";
 import type { Photo } from "../models/photo";
 import { PhotoWidget } from "./photo-widget";
 

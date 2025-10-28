@@ -3,9 +3,9 @@ import type { ComponentProps } from "react";
 import { useNavigate } from "react-router";
 import ArrowLeftIcon from "../../../assets/icons/chevron-left.svg?react";
 import ArrowRightIcon from "../../../assets/icons/chevron-right.svg?react";
-import { Button } from "../../../components/button";
+import { Button } from "../../../components/Button";
 import { ButtonIcon } from "../../../components/button-icon";
-import { Skeleton } from "../../../components/skeleton";
+import { Skeleton } from "../../../components/Sskeleton";
 
 interface PhotosNavigatorProps extends ComponentProps<"div"> {
 	previusPhotoId?: string;

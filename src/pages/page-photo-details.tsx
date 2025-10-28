@@ -1,11 +1,11 @@
 import { useTransition } from "react";
 import { useParams } from "react-router";
 import { toast } from "sonner";
-import { Button } from "../components/button";
+import { Button } from "../components/Button";
 import Container from "../components/Container";
 import { ImagePreview } from "../components/image-preview";
-import { Skeleton } from "../components/skeleton";
-import { Text } from "../components/text";
+import { Skeleton } from "../components/Sskeleton";
+import { Text } from "../components/Text";
 import { AlbumsListSelectable } from "../contexts/albums/components/albums-list-selectable";
 import { useAlbums } from "../contexts/albums/hooks/use-albums";
 import { PhotosNavigator } from "../contexts/photos/components/photos-navigator";

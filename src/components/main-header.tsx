@@ -4,9 +4,9 @@ import { Link, useLocation } from "react-router";
 import Logo from "../assets/images/galeria-plus-full-logo.svg?react";
 import { AlbumNewDialog } from "../contexts/albums/components/album-new-dialog";
 import { PhotoNewDialog } from "../contexts/photos/components/photo-new-dialog";
-import { Button } from "./button";
+import { Button } from "./Button";
 import Container from "./Container";
-import { Divider } from "./divider";
+import { Divider } from "./Divider";
 import { PhotosSearch } from "./photos-search";
 
 interface MainHeaderProps extends ComponentProps<typeof Container> {}

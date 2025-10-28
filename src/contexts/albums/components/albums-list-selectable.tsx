@@ -1,8 +1,8 @@
 import { useTransition } from "react";
-import { Divider } from "../../../components/divider";
+import { Divider } from "../../../components/Divider";
 import { InputCheckbox } from "../../../components/input-checkbox";
-import { Skeleton } from "../../../components/skeleton";
-import { Text } from "../../../components/text";
+import { Skeleton } from "../../../components/Sskeleton";
+import { Text } from "../../../components/Text";
 import usePhotoAlbums from "../../photos/hooks/use-photo-albums";
 import type { Photo } from "../../photos/models/photo";
 import type { Album } from "../models/album";

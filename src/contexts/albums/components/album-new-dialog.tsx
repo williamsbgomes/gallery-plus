@@ -3,16 +3,16 @@ import { Dialog, DialogClose, DialogTrigger } from "@radix-ui/react-dialog";
 import { useEffect, useState, useTransition } from "react";
 import { useForm } from "react-hook-form";
 import SelectCheckboxIllustration from "../../../assets/images/select-checkbox.svg?react";
-import { Button } from "../../../components/button";
+import { Button } from "../../../components/Button";
 import {
 	DialogBody,
 	DialogContent,
 	DialogFooter,
 	DialogHeader,
-} from "../../../components/dialog";
+} from "../../../components/Dialog";
 import { InputText } from "../../../components/input-text";
-import { Skeleton } from "../../../components/skeleton";
-import { Text } from "../../../components/text";
+import { Skeleton } from "../../../components/Sskeleton";
+import { Text } from "../../../components/Text";
 import PhotoImageSelectable from "../../photos/components/photo-image-selectable";
 import { usePhotos } from "../../photos/hooks/use-photos";
 import { useAlbum } from "../hooks/use-album";

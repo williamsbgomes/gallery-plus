@@ -2,8 +2,8 @@ import cx from "classnames";
 import type React from "react";
 import { tv, type VariantProps } from "tailwind-variants";
 import SpinnerIcon from "../assets/icons/spinner.svg?react";
-import { Icon } from "./icon";
-import { Text } from "./text";
+import { Icon } from "./Icon";
+import { Text } from "./Text";
 
 export const buttonVariants = tv({
 	base: "flex items-center justify-center cursor-pointer transition rounded group gap-1",

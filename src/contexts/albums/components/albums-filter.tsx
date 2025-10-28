@@ -1,8 +1,8 @@
 import cx from "classnames";
 import type { ComponentProps } from "react";
-import { Button } from "../../../components/button";
-import { Skeleton } from "../../../components/skeleton";
-import { Text } from "../../../components/text";
+import { Button } from "../../../components/Button";
+import { Skeleton } from "../../../components/Sskeleton";
+import { Text } from "../../../components/Text";
 import { usePhotos } from "../../photos/hooks/use-photos";
 import type { Album } from "../models/album";
 

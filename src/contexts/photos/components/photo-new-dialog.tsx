@@ -4,19 +4,19 @@ import type React from "react";
 import { useEffect, useState, useTransition } from "react";
 import { useForm } from "react-hook-form";
 import { Alert } from "../../../components/Alert";
-import { Button } from "../../../components/button";
+import { Button } from "../../../components/Button";
 import {
 	Dialog,
 	DialogBody,
 	DialogContent,
 	DialogFooter,
 	DialogHeader,
-} from "../../../components/dialog";
+} from "../../../components/Dialog";
 import { ImagePreview } from "../../../components/image-preview";
 import { InputSingleFile } from "../../../components/input-single-file";
 import { InputText } from "../../../components/input-text";
-import { Skeleton } from "../../../components/skeleton";
-import { Text } from "../../../components/text";
+import { Skeleton } from "../../../components/Sskeleton";
+import { Text } from "../../../components/Text";
 import { useAlbums } from "../../albums/hooks/use-albums";
 import { usePhoto } from "../hooks/use-photo";
 import { type PhotoNewFormSchema, photoNewFormSchema } from "../schemas";
