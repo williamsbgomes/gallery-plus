@@ -1,6 +1,7 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { NuqsAdapter } from "nuqs/adapters/react-router/v7";
 import { BrowserRouter, Route, Routes } from "react-router";
+import { Toaster } from "sonner";
 import { LayoutMain } from "./pages/layout-main";
 import { PageComponents } from "./pages/page-components";
 import { PageHome } from "./pages/page-home";
@@ -12,6 +13,7 @@ export function App() {
 	return (
 		<QueryClientProvider client={queryClient}>
 			<NuqsAdapter>
+				<Toaster position="bottom-center" />
 				<BrowserRouter>
 					<Routes>
 						<Route element={<LayoutMain />}>
