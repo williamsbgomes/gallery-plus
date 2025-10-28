@@ -1,6 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Dialog, DialogClose, DialogTrigger } from "@radix-ui/react-dialog";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useTransition } from "react";
 import { useForm } from "react-hook-form";
 import SelectCheckboxIllustration from "../../../assets/images/select-checkbox.svg?react";
 import { Button } from "../../../components/button";
@@ -15,6 +15,7 @@ import { Skeleton } from "../../../components/skeleton";
 import { Text } from "../../../components/text";
 import PhotoImageSelectable from "../../photos/components/photo-image-selectable";
 import usePhotos from "../../photos/hooks/use-photos";
+import { useAlbum } from "../hooks/use-album";
 import { type AlbumNewFormSchema, albumNewFormSchema } from "../schemas";
 
 interface AlbumNewDialogProps {
@@ -27,6 +28,8 @@ export function AlbumNewDialog({ trigger }: AlbumNewDialogProps) {
 		resolver: zodResolver(albumNewFormSchema),
 	});
 	const { photos, isLoadingPhotos } = usePhotos();
+	const { createAlbum } = useAlbum();
+	const [isCreatingAlbum, setIsCreatingAlbum] = useTransition();
 
 	function handleTogglePhoto(selected: boolean, photoId: string) {
 		const photosIds = form.getValues("photosIds") || [];
@@ -42,7 +45,10 @@ export function AlbumNewDialog({ trigger }: AlbumNewDialogProps) {
 	}
 
 	function handleSubmit(payload: AlbumNewFormSchema) {
-		console.log(payload);
+		setIsCreatingAlbum(async () => {
+			await createAlbum(payload);
+			setModalOpen(false);
+		});
 	}
 
 	useEffect(() => {
@@ -110,9 +116,17 @@ export function AlbumNewDialog({ trigger }: AlbumNewDialogProps) {
 
 					<DialogFooter>
 						<DialogClose asChild>
-							<Button variant="secondary">Cancelar</Button>
+							<Button variant="secondary" disabled={isCreatingAlbum}>
+								Cancelar
+							</Button>
 						</DialogClose>
-						<Button type="submit">Criar</Button>
+						<Button
+							type="submit"
+							handling={isCreatingAlbum}
+							disabled={isCreatingAlbum}
+						>
+							{isCreatingAlbum ? "Criando" : "Criar"}
+						</Button>
 					</DialogFooter>
 				</form>
 			</DialogContent>
