@@ -11,7 +11,7 @@ import {
 	DialogContent,
 	DialogFooter,
 	DialogHeader,
-} from "../../../components/Dialog";
+} from "../../../components/dialog";
 import { ImagePreview } from "../../../components/image-preview";
 import { InputSingleFile } from "../../../components/input-single-file";
 import { InputText } from "../../../components/input-text";

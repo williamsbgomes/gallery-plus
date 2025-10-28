@@ -9,7 +9,7 @@ import {
 	DialogContent,
 	DialogFooter,
 	DialogHeader,
-} from "../../../components/Dialog";
+} from "../../../components/dialog";
 import { InputText } from "../../../components/input-text";
 import { Skeleton } from "../../../components/Sskeleton";
 import { Text } from "../../../components/Text";
