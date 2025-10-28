@@ -3,7 +3,7 @@ import { DialogClose, DialogTrigger } from "@radix-ui/react-dialog";
 import type React from "react";
 import { useEffect, useState, useTransition } from "react";
 import { useForm } from "react-hook-form";
-import { Alert } from "../../../components/alert";
+import { Alert } from "../../../components/Alert";
 import { Button } from "../../../components/button";
 import {
 	Dialog,

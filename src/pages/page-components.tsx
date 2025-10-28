@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import ChevronLeftIcon from "../assets/icons/chevron-left.svg?react";
 import ChevronRightIcon from "../assets/icons/chevron-right.svg?react";
 import SearchIcon from "../assets/icons/search.svg?react";
-import { Alert } from "../components/alert";
+import { Alert } from "../components/Alert";
 import { Badge } from "../components/badge";
 import { Button } from "../components/button";
 import { ButtonIcon } from "../components/button-icon";
