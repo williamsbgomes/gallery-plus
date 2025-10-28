@@ -5,7 +5,7 @@ import Logo from "../assets/images/galeria-plus-full-logo.svg?react";
 import { AlbumNewDialog } from "../contexts/albums/components/album-new-dialog";
 import { PhotoNewDialog } from "../contexts/photos/components/photo-new-dialog";
 import { Button } from "./button";
-import Container from "./container";
+import Container from "./Container";
 import { Divider } from "./divider";
 import { PhotosSearch } from "./photos-search";
 

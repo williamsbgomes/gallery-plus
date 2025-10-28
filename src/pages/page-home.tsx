@@ -1,4 +1,4 @@
-import Container from "../components/container";
+import Container from "../components/Container";
 import { AlbumsFilter } from "../contexts/albums/components/albums-filter";
 import { useAlbums } from "../contexts/albums/hooks/use-albums";
 import { PhotosList } from "../contexts/photos/components/photos-list";
